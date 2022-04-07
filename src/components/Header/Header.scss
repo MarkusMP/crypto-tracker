@@ -1,0 +1,53 @@
+@import "../../styles/base/variables.scss";
+
+header {
+  background-color: $primary-color;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+
+    .logo {
+      color: $secondary-color;
+    }
+
+    .links {
+      .select {
+        position: relative;
+        display: flex;
+        width: 4em;
+        height: 2em;
+        border-radius: 0.25em;
+        overflow: hidden;
+
+        list-style: none;
+
+        select {
+          appearance: none;
+          outline: 0;
+          border: 0;
+          box-shadow: none;
+          flex: 1;
+          padding: 0 1em;
+          color: $primary-color;
+          background-color: $white-color;
+          background-image: none;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: "\25BC";
+          position: absolute;
+          top: 2px;
+          right: 0;
+          padding: 1px;
+          background-color: $white-color;
+          color: $primary-color;
+          transition: 0.25s all ease;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
