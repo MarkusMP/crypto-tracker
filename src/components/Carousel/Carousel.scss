@@ -1,0 +1,36 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "../../styles/base/variables";
+.carousel {
+  height: 20%;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  .carouselItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+}
+
+@media (max-width: 1280px) {
+  .carousel {
+    width: 80%;
+  }
+}
+
+@media (max-width: 960px) {
+  .carousel {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    width: 90%;
+  }
+}

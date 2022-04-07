@@ -18,3 +18,15 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .hero {
+    .hero-content {
+      padding-top: 0;
+    }
+    h1 {
+      font-size: 48px !important;
+      padding-bottom: 10px;
+    }
+  }
+}
