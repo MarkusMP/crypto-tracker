@@ -1,0 +1,27 @@
+@import "../../styles/base/variables";
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+
+  .current {
+    background-color: darken($primary-color, 4%) !important;
+    color: $secondary-color !important;
+  }
+
+  .page-item {
+    cursor: pointer;
+    color: $white-color;
+    background-color: darken($primary-color, 2%);
+    margin: 5px;
+    width: 45px;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: darken($primary-color, 4%);
+      color: $secondary-color;
+    }
+  }
+}

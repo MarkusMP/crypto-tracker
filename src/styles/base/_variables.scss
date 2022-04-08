@@ -2,5 +2,13 @@ $primary-color: #0c0f1d;
 $secondary-color: #f1c40f;
 
 $light-white: #e5e5e5;
-$white-color: #ffffff;
-$dark-grey: #333333;
+$white-color: #f3f3f3;
+$light-grey: #3f3f3f;
+
+.danger {
+  color: red;
+}
+
+.success {
+  color: rgb(14, 203, 129);
+}

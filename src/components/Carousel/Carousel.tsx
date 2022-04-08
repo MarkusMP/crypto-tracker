@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-function numberWithCommas(x: any) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 const CarouselComp = () => {
   const { trendingCoins } = useAppSelector((state) => state.crypto);
   const { symbol } = useAppSelector((state) => state.currency);
 
+  function numberWithCommas(x: any) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   const items = trendingCoins.map((coin) => {
-    let profit = coin?.price_change_percentage_24h >= 0;
+    let profit = coin.price_change_percentage_24h >= 0;
     return (
       <Link className="carouselItem" to={`/coins/${coin.id}`}>
         <img
@@ -24,14 +24,13 @@ const CarouselComp = () => {
           style={{ marginBottom: 10 }}
         />
         <span>
-          {coin?.symbol}
+          {coin.symbol}
           &nbsp;
           <span
+            className={
+              coin.price_change_percentage_24h > 0 ? "success" : "danger"
+            }
             style={{
-              color:
-                coin.price_change_percentage_24h > 0
-                  ? "rgb(14, 203, 129)"
-                  : "red",
               fontWeight: 500,
             }}
           >
@@ -48,7 +47,7 @@ const CarouselComp = () => {
 
   const responsive = {
     0: {
-      items: 2,
+      items: 1,
     },
     512: {
       items: 4,
