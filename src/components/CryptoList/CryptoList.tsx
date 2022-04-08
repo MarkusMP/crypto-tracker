@@ -40,18 +40,20 @@ const CryptoList = () => {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Coin</th>
-            <th>Price</th>
-            <th>24h Change</th>
-            <th>Market Cap</th>
-          </tr>
-        </thead>
+      <div style={{ overflowX: "auto" }}>
+        <table>
+          <thead>
+            <tr>
+              <th>Coin</th>
+              <th>Price</th>
+              <th>24h Change</th>
+              <th>Market Cap</th>
+            </tr>
+          </thead>
 
-        <CryptoListItem list={currentCoins} />
-      </table>
+          <CryptoListItem list={currentCoins} />
+        </table>
+      </div>
       <Pagination
         coinsPerPage={coinsPerPage}
         totalCoins={list.length}
