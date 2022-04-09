@@ -1,10 +1,10 @@
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 @import "../../styles/base/variables";
 .carousel {
-  height: 20%;
   width: 70%;
   margin: auto;
   display: flex;
+  padding-top: 10px;
   align-items: center;
 
   .carouselItem {
