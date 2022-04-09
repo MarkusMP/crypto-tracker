@@ -2,13 +2,15 @@
 
 header {
   background-color: $primary-color;
+  -webkit-box-shadow: 5px 5px 15px 9px #000000;
+  box-shadow: 1px 1px 10px 2px #000000;
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 8vh;
 
-    .logo {
+    .logo a {
       color: $secondary-color;
     }
 

@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.scss";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setCurrency, setSymbol } from "../../features/currency/currencySlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useAppDispatch();
@@ -24,7 +25,9 @@ const Header = () => {
     <header>
       <nav className="container">
         <div className="logo">
-          <h1>Crypto Tracker</h1>
+          <Link to="/">
+            <h1>Crypto Tracker</h1>
+          </Link>
         </div>
 
         <ul className="links">

@@ -1,0 +1,21 @@
+@import "../../styles/base/variables";
+.selectbutton {
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s ease;
+    background-color: $secondary-color;
+    color: #333;
+  }
+}
+
+@media (max-width: 600px) {
+  .selectbutton {
+    margin-top: 10px;
+  }
+}

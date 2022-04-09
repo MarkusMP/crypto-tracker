@@ -1,0 +1,43 @@
+@import "../../styles/base/variables";
+
+.coin-section {
+  padding: 30px;
+  color: $white-color;
+  display: flex;
+
+  .info {
+    max-width: 500px;
+
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h3 {
+        font-size: 48px;
+      }
+    }
+
+    h5 {
+      margin-top: 15px;
+      font-size: 24px;
+
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  section {
+    display: flex;
+    flex-direction: column;
+
+    .info {
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+  }
+}

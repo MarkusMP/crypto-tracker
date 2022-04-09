@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./CryptoListItem.scss";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { getCoinList } from "../../features/crypto/cryptoSlice";
+import { getCoinList, reset } from "../../features/crypto/cryptoSlice";
 import { useNavigate } from "react-router-dom";
 
 interface IProps {
@@ -25,7 +25,13 @@ const CryptoListItem = ({ list }: IProps) => {
   const { symbol, currency } = useAppSelector((state) => state.currency);
   const navigate = useNavigate();
   useEffect(() => {
-    dispatch(getCoinList({}));
+    const dispatchCoins = async () => {
+      await dispatch(getCoinList({}));
+
+      dispatch(reset());
+    };
+
+    dispatchCoins();
   }, [dispatch, currency]);
 
   function numberWithCommas(x: any) {
